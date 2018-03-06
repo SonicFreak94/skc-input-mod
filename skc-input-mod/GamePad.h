@@ -25,8 +25,13 @@ class GamePad
 	Buttons pressed_       = Button_None;
 
 public:
-	GamePad();
+	GamePad() = default;
+	GamePad(GamePad& other) = delete;
+	GamePad(GamePad&& other) noexcept;
 	~GamePad();
+
+	GamePad& operator=(GamePad& other) = delete;
+	GamePad& operator=(GamePad&& other) noexcept;
 
 	bool open(int id);
 	void close();
@@ -36,4 +41,7 @@ public:
 	int controller_id() const;
 	Buttons held() const;
 	Buttons pressed() const;
+
+private:
+	void move_from(GamePad&& other);
 };

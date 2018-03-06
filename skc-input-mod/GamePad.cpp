@@ -15,11 +15,20 @@ Buttons& operator|=(Buttons& l, const Buttons& r)
 	return l;
 }
 
-GamePad::GamePad() = default;
+GamePad::GamePad(GamePad&& other) noexcept
+{
+	move_from(std::move(other));
+}
 
 GamePad::~GamePad()
 {
 	close();
+}
+
+GamePad& GamePad::operator=(GamePad&& other) noexcept
+{
+	move_from(std::move(other));
+	return *this;
 }
 
 bool GamePad::open(int id)
@@ -160,4 +169,19 @@ Buttons GamePad::held() const
 Buttons GamePad::pressed() const
 {
 	return pressed_;
+}
+
+void GamePad::move_from(GamePad&& other)
+{
+	gamepad        = other.gamepad;
+	controller_id_ = other.controller_id_;
+	connected_     = other.connected_;
+	held_          = other.held_;
+	pressed_       = other.pressed_;
+
+	other.gamepad        = nullptr;
+	other.controller_id_ = -1;
+	other.connected_     = false;
+	other.held_          = Button_None;
+	other.pressed_       = Button_None;
 }
