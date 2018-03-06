@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "skc-input-mod", "skc-input-mod\skc-input-mod.vcxproj", "{A46120E8-5B44-465A-A0C2-53349E887130}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A46120E8-5B44-465A-A0C2-53349E887130}.Debug|x86.ActiveCfg = Debug|Win32
+		{A46120E8-5B44-465A-A0C2-53349E887130}.Debug|x86.Build.0 = Debug|Win32
+		{A46120E8-5B44-465A-A0C2-53349E887130}.Release|x86.ActiveCfg = Release|Win32
+		{A46120E8-5B44-465A-A0C2-53349E887130}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FD6BE8E-18C7-444E-A2F4-33FD7BAA7E7D}
+	EndGlobalSection
+EndGlobal

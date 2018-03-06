@@ -1,0 +1,3 @@
+[submodule "skc-mod-loader"]
+	path = skc-mod-loader
+	url = https://github.com/sonicretro/skc-mod-loader.git
