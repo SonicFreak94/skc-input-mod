@@ -61,7 +61,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;SKCINPUTMOD_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)skc-mod-loader\SKCModLoader;$(SolutionDir)SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)skc-mod-loader\SKCModLoader;$(SolutionDir)skc-mod-loader\mod-loader-common\ModLoaderCommon;$(SolutionDir)SDL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -86,7 +86,7 @@ xcopy /Y /D "$(SolutionDir)SDL2\README-SDL.txt" "$(OutDir)"</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;SKCINPUTMOD_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)skc-mod-loader\SKCModLoader;$(SolutionDir)SDL2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)skc-mod-loader\SKCModLoader;$(SolutionDir)skc-mod-loader\mod-loader-common\ModLoaderCommon;$(SolutionDir)SDL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -114,11 +114,13 @@ xcopy /Y /D "$(SolutionDir)SDL2\README-SDL.txt" "$(OutDir)"</Command>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\skc-mod-loader\mod-loader-common\ModLoaderCommon\FileSystem.h" />
     <ClInclude Include="GamePad.h" />
     <ClInclude Include="minmax.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\skc-mod-loader\mod-loader-common\ModLoaderCommon\FileSystem.cpp" />
     <ClCompile Include="GamePad.cpp" />
     <ClCompile Include="skc-input-mod.cpp" />
     <ClCompile Include="stdafx.cpp">

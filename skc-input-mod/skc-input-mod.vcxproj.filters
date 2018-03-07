@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="mod-loader-common">
+      <UniqueIdentifier>{520d3e95-376c-4da7-ba18-5b59d12d9c29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -24,6 +27,9 @@
     <ClInclude Include="minmax.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\skc-mod-loader\mod-loader-common\ModLoaderCommon\FileSystem.h">
+      <Filter>mod-loader-common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -34,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="GamePad.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\skc-mod-loader\mod-loader-common\ModLoaderCommon\FileSystem.cpp">
+      <Filter>mod-loader-common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
